@@ -2,63 +2,144 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ffaeble Page</title>
     <style>
+        :root {
+            --background-color: #F7F7D4;
+            --text-background-color: #F8E9D8;
+            --lining-color: #B2D732;
+            --title-color: #1B3409;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: #F7F7D4;
-            color: #FEFE33;
+            min-height: 100vh;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: var(--background-color);
+            background-image:  repeating-linear-gradient(45deg, #F7F7D4 25%, transparent 25%, transparent 75%, #F7F7D4 75%, #F7F7D4), repeating-linear-gradient(45deg, #F7F7D4 25%, #F8E9D8 25%, #F8E9D8 75%, #F7F7D4 75%, #F7F7D4);
+            background-position: 0 0, 10px 10px;
+            background-size: 20px 20px;
         }
+
         header {
-            background-color: #B2D732;
-            padding: 20px;
+            position: absolute;
+            top: 0;
             text-align: center;
+            width: 100%;
         }
+
+        footer {
+            margin-top: auto;
+            width: 100%;
+            background-color: var(--lining-color);
+        }
+
         main {
-            padding: 20px;
+            padding-top: 120px;
             max-width: 800px;
             margin: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            text-align: center;
         }
-        img {
+
+        h1, h2, p, li {
+            margin: 10px 0;
+            color: var(--title-color);
+        }
+        footer > p {
+            text-align: center;
+            font-size: 0.8em;
+            opacity: 0.7;
+        }
+
+        ul {
+            list-style-type: none;
+            border: 2px solid var(--lining-color);
+            border-radius: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: var(--text-background-color);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            background-color: var(--lining-color);
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+            border-radius: 0 0 10px 10px;
+            outline: var(--lining-color) solid 2px;
+            background-image:  linear-gradient(30deg, #F7F7D4 12%, transparent 12.5%, transparent 87%, #F7F7D4 87.5%, #F7F7D4), linear-gradient(150deg, #F7F7D4 12%, transparent 12.5%, transparent 87%, #F7F7D4 87.5%, #F7F7D4), linear-gradient(30deg, #F7F7D4 12%, transparent 12.5%, transparent 87%, #F7F7D4 87.5%, #F7F7D4), linear-gradient(150deg, #F7F7D4 12%, transparent 12.5%, transparent 87%, #F7F7D4 87.5%, #F7F7D4), linear-gradient(60deg, #F7F7D477 25%, transparent 25.5%, transparent 75%, #F7F7D477 75%, #F7F7D477), linear-gradient(60deg, #F7F7D477 25%, transparent 25.5%, transparent 75%, #F7F7D477 75%, #F7F7D477);
+            background-size: 20px 35px;
+            background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+        }
+
+        .header-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .header-text h1 {
+            padding-left: 12px;
+            padding-right: 12px;
+            font-size: 2em;
+            background-color: var(--lining-color);
+            border-radius: 20px;
+        }
+
+        .header-image {
+            position:absolute;
+            top: -10px;
+            right: -10px;
             border-radius: 50%;
             width: 150px;
             height: 150px;
-            border: 3px solid #66B032;
+            border: 3px solid var(--background-color);
         }
-        h1, h2, p, li {
-            margin: 10px 0;
-            color: #1B3409;
-        }
+
     </style>
 </head>
 <body>
     <header>
-        <img src="mone.png" alt="Me">
-        <h1>Tesch</h1>
+        <div class="header-container">
+            <div class="header-text">
+                <h1>About Me</h1>
+            </div>
+        </div>
+        <img src="mone.png" alt="Me" class="header-image">
     </header>
     <main>
-        <h2>About Me</h2>
-        <p>Hello! I am [Your Name], a passionate and dedicated student eager to gain hands-on experience in the field of Information Technology.</p>
-        
+        <h2>Introduction</h2>
+        <ul>
+            <li>Hello! My name is Ffaeble, a passionate and dedicated student eager to gain hands-on experience in the field of Software Development.</li>
+            <li>Having had a few rougher years already, the determination to get started and learn as much as possible has only grown stronger.</li>
+        </ul>
+
+        <h2>Interests</h2>
+        <ul>
+            <li>When not coding, you can find me exploring new technologies, reading novels, or simply enjoying the outdoors.</li>
+            <li>Explaining code to the rest of my class is not too hard since i can understand code quite easily.</li>
+            <li>Cybersecurity, Data Security, and mobile development look quite interesting to me at the moment but i am open to everything since i have no experience with them.</li>
+            <li>At home, working on Linux almost exclusively, but I have no issues using other Operating Systems.</li>
+        </ul>
+
         <h2>Skills</h2>
         <ul>
-            <li>Programming Languages: HTML, CSS, JavaScript, Python, C#</li>
-            <li>Frameworks: React, React Native</li>
-            <li>Other: Git, Scrum</li>
+            <li><strong>Programming Languages:</strong> HTML, CSS, JavaScript, Python, C#</li>
+            <li><strong>Frameworks:</strong> React, React Native</li>
+            <li><strong>Other:</strong> Git, Scrum</li>
         </ul>
-        
+
         <h2>Projects</h2>
         <ul>
             <li><strong>Chess:</strong> My first project, a chess game made using Python without any imports.</li>
@@ -67,6 +148,9 @@
             <li><strong>Dwarf and Dungeons (WIP):</strong> A Dwarf Fortress Clone using Godot Mono.</li>
         </ul>
     </main>
+    <footer>
+        <p>&copy; 2024 <a href="https://github.com/Ffaeble" target="_blank" rel="noopener noreferrer">Ffaeble</a></p>
+    </footer>
 </body>
 </html>
 
